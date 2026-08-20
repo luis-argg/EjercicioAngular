@@ -1,1 +1,248 @@
-/* You can add global styles to this file, and also import other style files */
+/* ====== The Strokes - Estilos globales ====== */
+
+:root {
+  --azul-noche: #081226;
+  --azul-oscuro: #0d1e3d;
+  --azul-medio: #143061;
+  --azul: #2563eb;
+  --azul-brillante: #3b82f6;
+  --azul-claro: #60a5fa;
+  --celeste: #93c5fd;
+  --texto: #eaf2ff;
+  --texto-suave: #a8bde0;
+  --borde: rgba(96, 165, 250, 0.25);
+  --sombra: 0 10px 30px rgba(2, 8, 23, 0.55);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--azul-noche);
+  background-image:
+    radial-gradient(60rem 40rem at 85% -10%, rgba(37, 99, 235, 0.18), transparent 60%),
+    radial-gradient(50rem 35rem at -15% 40%, rgba(37, 99, 235, 0.12), transparent 60%);
+  color: var(--texto);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Anton', 'Inter', sans-serif;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--azul-claro);
+  text-decoration: none;
+}
+
+.contenedor {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}
+
+.seccion {
+  padding: 5rem 0;
+}
+
+.seccion-titulo {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.seccion-subtitulo {
+  color: var(--texto-suave);
+  max-width: 620px;
+  margin-bottom: 2.5rem;
+}
+
+.titulo-linea {
+  width: 64px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--azul), var(--celeste));
+  margin-bottom: 1.25rem;
+}
+
+/* ====== Botones ====== */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primario {
+  background: linear-gradient(135deg, var(--azul), var(--azul-brillante));
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4);
+}
+
+.btn-primario:hover {
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.55);
+}
+
+.btn-borde {
+  border-color: var(--borde);
+  color: var(--celeste);
+  background: transparent;
+}
+
+.btn-borde:hover {
+  background: rgba(59, 130, 246, 0.12);
+  border-color: var(--azul-claro);
+}
+
+/* ====== Cards ====== */
+.card {
+  background: linear-gradient(180deg, rgba(20, 48, 97, 0.45), rgba(13, 30, 61, 0.65));
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--azul-claro);
+  box-shadow: var(--sombra);
+}
+
+/* ====== Formularios ====== */
+.campo label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--celeste);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.campo input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--borde);
+  background: rgba(8, 18, 38, 0.7);
+  color: var(--texto);
+  font-size: 0.95rem;
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.campo input::placeholder {
+  color: rgba(168, 189, 224, 0.55);
+}
+
+.campo input:focus {
+  border-color: var(--azul-claro);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+/* ====== Páginas de autenticación (login / register) ====== */
+.auth-pagina {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+  background:
+    radial-gradient(50rem 35rem at 80% -10%, rgba(37, 99, 235, 0.25), transparent 60%),
+    radial-gradient(45rem 30rem at 10% 110%, rgba(37, 99, 235, 0.18), transparent 60%);
+}
+
+.auth-card {
+  width: min(420px, 100%);
+  background: linear-gradient(180deg, rgba(20, 48, 97, 0.55), rgba(13, 30, 61, 0.85));
+  border: 1px solid var(--borde);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  box-shadow: var(--sombra);
+}
+
+.auth-logo {
+  display: block;
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--texto);
+  margin-bottom: 1.75rem;
+}
+
+.auth-logo span {
+  color: var(--azul-claro);
+}
+
+.auth-card h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.auth-subtitulo {
+  color: var(--texto-suave);
+  font-size: 0.92rem;
+  margin-bottom: 1.75rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.auth-form .btn {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.auth-pie {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+}
+
+.auth-volver {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+}

@@ -1,1 +1,74 @@
-<p>register works!</p>
+<div class="auth-pagina">
+  <div class="auth-card">
+    <a routerLink="/home" class="auth-logo">The <span>Strokes</span></a>
+
+    <h1>Crear cuenta</h1>
+    <p class="auth-subtitulo">Únete al club de fans de The Strokes.</p>
+
+    <form class="auth-form">
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input
+          id="nombre"
+          type="text"
+          placeholder="Tu nombre"
+          autocomplete="given-name"
+        />
+      </div>
+
+      <div class="campo">
+        <label for="apellido">Apellido</label>
+        <input
+          id="apellido"
+          type="text"
+          placeholder="Tu apellido"
+          autocomplete="family-name"
+        />
+      </div>
+
+      <div class="campo">
+        <label for="usuario">Nombre de usuario</label>
+        <input
+          id="usuario"
+          type="text"
+          placeholder="ejemplo: strokes_fan"
+          autocomplete="username"
+        />
+      </div>
+
+      <div class="campo">
+        <label for="edad">Edad</label>
+        <input id="edad" type="number" min="1" max="120" placeholder="18" />
+      </div>
+
+      <div class="campo">
+        <label for="email">Correo electrónico</label>
+        <input
+          id="email"
+          type="email"
+          placeholder="tu@correo.com"
+          autocomplete="email"
+        />
+      </div>
+
+      <div class="campo">
+        <label for="password">Contraseña</label>
+        <input
+          id="password"
+          type="password"
+          placeholder="••••••••"
+          autocomplete="new-password"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primario">Crear cuenta</button>
+    </form>
+
+    <p class="auth-pie">
+      ¿Ya tienes cuenta?
+      <a routerLink="/login">Inicia sesión aquí</a>
+    </p>
+
+    <a routerLink="/home" class="auth-volver">← Volver al inicio</a>
+  </div>
+</div>

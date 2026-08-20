@@ -1,1 +1,135 @@
-<p>home works!</p>
+<header class="navbar">
+  <div class="contenedor navbar-contenido">
+    <a routerLink="/home" class="logo">The <span>Strokes</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#banda">La Banda</a></li>
+        <li><a href="#discografia">Discografía</a></li>
+        <li><a href="#integrantes">Integrantes</a></li>
+        <li><a href="#galeria">Galería</a></li>
+      </ul>
+    </nav>
+    <div class="nav-acciones">
+      <a routerLink="/login" class="btn btn-borde">Iniciar sesión</a>
+      <a routerLink="/register" class="btn btn-primario">Registrarse</a>
+    </div>
+  </div>
+</header>
+
+<!-- ====== HERO ====== -->
+<section class="hero" id="inicio">
+  <div class="contenedor hero-contenido">
+    <div class="hero-texto">
+      <p class="hero-etiqueta">Garage rock revival · Nueva York</p>
+      <h1>The Strokes</h1>
+      <p class="hero-descripcion">
+        La banda que redefinió el rock del siglo XXI. Del underground de NYC a
+        los escenarios más grandes del mundo.
+      </p>
+      <div class="hero-botones">
+        <a href="#discografia" class="btn btn-primario">Ver discografía</a>
+        <a href="#banda" class="btn btn-borde">Conocer la banda</a>
+      </div>
+    </div>
+    <div class="hero-imagen">
+      <img [src]="heroImagen" alt="The Strokes en vivo" />
+    </div>
+  </div>
+</section>
+
+<!-- ====== SOBRE LA BANDA ====== -->
+<section class="seccion" id="banda">
+  <div class="contenedor banda-grid">
+    <div class="banda-imagen card">
+      <!-- Reemplaza este div por: <img src="TU_URL" alt="The Strokes" /> -->
+      <div class="placeholder-img">Imagen de la banda</div>
+    </div>
+    <div class="banda-info">
+      <h2 class="seccion-titulo">Sobre la banda</h2>
+      <div class="titulo-linea"></div>
+      <p>
+        <strong>The Strokes</strong> se formó en Nueva York en 1998 y es
+        considerada una de las bandas más influyentes del rock moderno. Con su
+        debut <em>Is This It</em> (2001) revitalizó el garage rock y marcó el
+        rumbo de toda una generación de músicos.
+      </p>
+      <p>
+        Su sonido, mezcla de guitarras crudas, melodías nostálgicas y la voz
+        inconfundible de Julian Casablancas, los llevó de los clubes del Lower
+        East Side a encabezar festivales alrededor del mundo.
+      </p>
+      <ul class="banda-datos">
+        <li><span>1998</span> Año de formación</li>
+        <li><span>6</span> Álbumes de estudio</li>
+        <li><span>NYC</span> Origen</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ====== DISCOGRAFÍA ====== -->
+<section class="seccion" id="discografia">
+  <div class="contenedor">
+    <h2 class="seccion-titulo">Discografía</h2>
+    <p class="seccion-subtitulo">
+      Los álbumes esenciales que definieron su carrera.
+    </p>
+    <div class="albums-grid">
+      @for (album of albums; track album.titulo) {
+        <article class="card album-card">
+          <div class="album-portada">
+            <img [src]="album.imagen" [alt]="'Portada de ' + album.titulo" />
+          </div>
+          <div class="album-info">
+            <h3>{{ album.titulo }}</h3>
+            <span class="album-anio">{{ album.anio }}</span>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ====== INTEGRANTES ====== -->
+<section class="seccion" id="integrantes">
+  <div class="contenedor">
+    <h2 class="seccion-titulo">Integrantes</h2>
+    <p class="seccion-subtitulo">
+      Los cinco músicos detrás del sonido de The Strokes.
+    </p>
+    <div class="integrantes-grid">
+      @for (miembro of integrantes; track miembro.nombre) {
+        <article class="card integrante-card">
+          <!-- Reemplaza este div por: <img src="TU_URL" [alt]="miembro.nombre" /> -->
+          <div class="placeholder-img placeholder-cuadrado">Foto</div>
+          <h3>{{ miembro.nombre }}</h3>
+          <p>{{ miembro.instrumento }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ====== GALERÍA ====== -->
+<section class="seccion" id="galeria">
+  <div class="contenedor">
+    <h2 class="seccion-titulo">Galería</h2>
+    <p class="seccion-subtitulo">
+      Momentos en vivo, sesiones y archivos de la banda.
+    </p>
+    <div class="galeria-grid">
+      @for (i of [1, 2, 3, 4, 5, 6]; track i) {
+        <!-- Reemplaza cada div por: <img src="TU_URL" alt="Descripción" /> -->
+        <div class="card galeria-item placeholder-img">Imagen {{ i }}</div>
+      }
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="contenedor footer-contenido">
+    <a routerLink="/home" class="logo">The <span>Strokes</span></a>
+    <p>© 2026 The Strokes Fan Page. Todos los derechos reservados.</p>
+  </div>
+</footer>
