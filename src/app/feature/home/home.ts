@@ -7,11 +7,6 @@ interface Album {
   imagen: string;
 }
 
-interface Integrante {
-  nombre: string;
-  instrumento: string;
-}
-
 @Component({
   imports: [RouterLink],
   selector: 'app-home',
@@ -47,13 +42,5 @@ export class Home {
       imagen:
         'https://www.guioteca.com/los-2000/files/2021/04/81xesqe7UML._SL1500_.jpg',
     },
-  ];
-
-  protected readonly integrantes: Integrante[] = [
-    { nombre: 'Julian Casablancas', instrumento: 'Voz' },
-    { nombre: 'Nick Valensi', instrumento: 'Guitarra' },
-    { nombre: 'Albert Hammond Jr.', instrumento: 'Guitarra' },
-    { nombre: 'Nikolai Fraiture', instrumento: 'Bajo' },
-    { nombre: 'Fabrizio Moretti', instrumento: 'Batería' },
   ];
 }

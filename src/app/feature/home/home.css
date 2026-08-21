@@ -52,14 +52,14 @@
 
 /* ====== Hero ====== */
 .hero {
-  padding: 5rem 0 6rem;
+  padding: 3.5rem 0 4rem;
 }
 
 .hero-contenido {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .hero-etiqueta {
@@ -72,7 +72,7 @@
 }
 
 .hero h1 {
-  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-size: clamp(2.4rem, 6vw, 3.75rem);
   text-transform: uppercase;
   background: linear-gradient(120deg, #fff, var(--celeste));
   -webkit-background-clip: text;
@@ -103,12 +103,12 @@
 .banda-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 3rem;
+  gap: 2rem;
   align-items: center;
 }
 
 .banda-imagen .placeholder-img {
-  min-height: 340px;
+  min-height: 260px;
 }
 
 .banda-info p {
@@ -173,35 +173,6 @@
   font-size: 0.9rem;
 }
 
-/* ====== Integrantes ====== */
-.integrantes-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
-}
-
-.integrante-card {
-  padding-bottom: 1.25rem;
-  text-align: center;
-}
-
-.integrante-card h3 {
-  font-size: 1rem;
-  margin-top: 1rem;
-  text-transform: uppercase;
-}
-
-.integrante-card p {
-  color: var(--azul-claro);
-  font-size: 0.88rem;
-  font-weight: 600;
-}
-
-.placeholder-cuadrado {
-  aspect-ratio: 1;
-  border-radius: 0;
-}
-
 /* ====== Galería ====== */
 .galeria-grid {
   display: grid;
@@ -219,10 +190,10 @@
   place-items: center;
   min-height: 200px;
   background:
-    linear-gradient(135deg, rgba(37, 99, 235, 0.25), rgba(13, 30, 61, 0.6)),
+    linear-gradient(135deg, rgba(30, 64, 175, 0.2), rgba(13, 30, 61, 0.6)),
     repeating-linear-gradient(
       45deg,
-      rgba(96, 165, 250, 0.05) 0 12px,
+      rgba(59, 111, 181, 0.05) 0 12px,
       transparent 12px 24px
     );
   border: 1px dashed var(--borde);
@@ -236,8 +207,8 @@
 /* ====== Footer ====== */
 .footer {
   border-top: 1px solid var(--borde);
-  padding: 2.5rem 0;
-  margin-top: 2rem;
+  padding: 1.75rem 0;
+  margin-top: 1rem;
 }
 
 .footer-contenido {

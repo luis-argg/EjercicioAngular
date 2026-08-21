@@ -6,7 +6,6 @@
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#banda">La Banda</a></li>
         <li><a href="#discografia">Discografía</a></li>
-        <li><a href="#integrantes">Integrantes</a></li>
         <li><a href="#galeria">Galería</a></li>
       </ul>
     </nav>
@@ -85,26 +84,6 @@
             <h3>{{ album.titulo }}</h3>
             <span class="album-anio">{{ album.anio }}</span>
           </div>
-        </article>
-      }
-    </div>
-  </div>
-</section>
-
-<!-- ====== INTEGRANTES ====== -->
-<section class="seccion" id="integrantes">
-  <div class="contenedor">
-    <h2 class="seccion-titulo">Integrantes</h2>
-    <p class="seccion-subtitulo">
-      Los cinco músicos detrás del sonido de The Strokes.
-    </p>
-    <div class="integrantes-grid">
-      @for (miembro of integrantes; track miembro.nombre) {
-        <article class="card integrante-card">
-          <!-- Reemplaza este div por: <img src="TU_URL" [alt]="miembro.nombre" /> -->
-          <div class="placeholder-img placeholder-cuadrado">Foto</div>
-          <h3>{{ miembro.nombre }}</h3>
-          <p>{{ miembro.instrumento }}</p>
         </article>
       }
     </div>
